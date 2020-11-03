@@ -1,0 +1,217 @@
+body {
+  font-family: "Overpass", sans-serif;
+
+  color: #63707e;
+}
+
+img {
+  max-width: 45%;
+  max-height: 45%;
+  align-self: center;
+}
+
+h1 {
+  font-size: 40px;
+  width: 90%;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 26px;
+}
+
+h2 {
+  display: inline;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+form {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+}
+
+h3 {
+  font-size: 46px;
+  font-weight: 600;
+  margin-top: 60px;
+  margin-bottom: 4px;
+}
+
+h4 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+p {
+  margin-top: 20px;
+}
+
+.tomorrow {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.tomorrowTemperature {
+  font-size: 26px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.tomorrowIcon {
+  max-width: 45%;
+  max-height: 45%;
+}
+
+.coder {
+  margin-top: 30px;
+  font-style: italic;
+  text-align: center;
+}
+.container {
+  background-image: url("https://image.freepik.com/free-vector/blue-cloudy-daylight-background-weather-design_33099-512.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  margin-top: 8px;
+  width: 800px;
+  max-width: 100%;
+}
+
+.secondHeader {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.125);
+  background-color: #fff;
+  border-width: 1px;
+  margin: 40px;
+}
+
+.sheCodesPlusLogo {
+  display: inline;
+  height: 30px;
+  margin: 0;
+  margin-right: 30px;
+  position: relative;
+}
+.firstHeader {
+  background-color: #fff;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.125);
+  background-color: #fff;
+  border-width: 1px;
+
+  color: rgb(39, 32, 68);
+  text-align: center;
+  padding: 12px;
+  max-width: 80%;
+  margin: auto;
+}
+.forcastCard {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.todayBlock {
+  height: 100%;
+}
+
+.magnifyingGlass {
+  display: inline;
+  max-width: 100%;
+  margin: 0;
+
+  border-style: none;
+  background-color: #fff;
+  margin-bottom: 0px;
+  max-height: 28px;
+  background: url(https://www.flaticon.com/svg/static/icons/svg/3203/3203073.svg);
+  background-size: 28px;
+  width: 28px;
+  color: rgba(0, 0, 0, 0);
+}
+.todayIcon {
+  max-width: 45%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cityForm input {
+  vertical-align: middle;
+  margin-right: 10px;
+  display: inline;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.tomorrowBlock {
+  margin-bottom: 16px;
+  max-width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.next4Days {
+  max-height: 96%;
+  margin-top: 4%;
+  max-width: 46%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.nextDays {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.nextDaysTemperature {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.todayInfo {
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.todayInfoBox {
+  margin-top: 20px;
+}
+
+#temperature-symbol-switch {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 172, 234);
+  border-width: 0;
+  padding: 2px;
+  font-size: 10px;
+  vertical-align: super;
+  outline: none;
+}
+
+#you-are-here-img {
+  background: url(https://static.thenounproject.com/png/25718-200.png);
+  background-size: 30px;
+  display: inline;
+  max-width: 100%;
+  margin: 0;
+  border-style: none;
+  background-color: #fff;
+  margin-bottom: 0px;
+  max-height: 30px;
+  width: 28px;
+  color: rgba(0, 0, 0, 0);
+}

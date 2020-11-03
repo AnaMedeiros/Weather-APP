@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Shecodes Plus Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="firstHeader">
+        <img
+          class="sheCodesPlusLogo"
+          src="images/sheCodesPlusLogo.png"
+          alt="SheCodesPlusLogo"
+        />
+        <h2>Shecodes Plus Project</h2>
+      </div>
+      <div class="secondHeader">
+        <h1>Weather Forecast</h1>
+      </div>
+      <div class="row forcastCard">
+        <div class="col-md-6 leftSide">
+          <div class="card todayBlock">
+            <form class="cityForm" id="selected-city-form">
+              <input
+                type="text"
+                id="selectedCity"
+                placeholder="Name the city"
+              />
+              <input type="submit" class="magnifyingGlass" id="search-button" />
+              <input type="button" id="you-are-here-img" />
+            </form>
+            <h3 id="userLocation">Porto</h3>
+            <div class="presentDay">
+              <span id="currentDay"></span>
+
+              <span id="currentHour"></span>
+            </div>
+
+            <div class="todayTemperature">
+              <span id="today-temperature">21</span>
+              <span id="temperature-symbol">ºC</span>
+              <button id="temperature-symbol-switch">ºF</button>
+            </div>
+
+            <img class="todayIcon" src="images/sunny.png" alt="Sunny" />
+            <div class="todayInfoBox">
+              <p id="weather-description" class="todayInfo"></p>
+              <p id="humidity" class="todayInfo"></p>
+              <p id="wind-speed" class="todayInfo"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 rightSide">
+          <div class="row card tomorrowBlock">
+            <p class="tomorrow">
+              <strong>Tomorrow</strong>
+            </p>
+            <p class="tomorrowTemperature">22ºC</p>
+            <img
+              class="tomorrowIcon"
+              src="images/cloudSun.png"
+              alt="Cloudy Sunny Day"
+            />
+          </div>
+          <div class="row nextDaysBlock">
+            <div class="card col-md-6 thirdDayBlock next4Days">
+              <p class="nextDays">
+                <strong>Fri</strong>
+                2nd
+              </p>
+              <p class="nextDaysTemperature">21ºC</p>
+              <img
+                class="nextDaysIcon"
+                src="images/cloud.png"
+                alt="Cloudy Day"
+              />
+            </div>
+            <div class="card col-md-6 fourthDayBlock next4Days">
+              <p class="nextDays">
+                <strong>Sat</strong>
+                3nd
+              </p>
+              <p class="nextDaysTemperature">23ºC</p>
+              <img
+                class="nextDaysIcon"
+                src="images/cloudSun.png"
+                alt="Cloudy Sunny Day"
+              />
+            </div>
+            <div class="card col-md-6 fifthDayBlock next4Days">
+              <p class="nextDays">
+                <strong>Sun</strong>
+                4nd
+              </p>
+              <p class="nextDaysTemperature">25ºC</p>
+              <img class="nextDaysIcon" src="images/sunny.png" alt="Sunny" />
+            </div>
+            <div class="card col-md-6 sixthDayBlock next4Days">
+              <p class="nextDays">
+                <strong>Mon</strong>
+                5nd
+              </p>
+              <p class="nextDaysTemperature">21ºC</p>
+              <img
+                class="nextDaysIcon"
+                src="images/rain.png"
+                alt="Rainny Day"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="coder">
+      <strong>Coded by Ana Gabriela Medeiros</strong>
+    </div>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
