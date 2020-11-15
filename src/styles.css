@@ -73,13 +73,11 @@ p {
 }
 .container {
   background-image: linear-gradient(
-    to right,
-    #ff8177 0%,
-    #ff867a 0%,
-    #ff8c7f 21%,
-    #f99185 52%,
-    #cf556c 78%,
-    #b12a5b 100%
+    to bottom,
+    #f2f6f5 0%,
+    #c8dad3 33%,
+    #93b5b3 66%,
+    #63707e 100%
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -87,7 +85,7 @@ p {
   margin-top: 8px;
   width: 800px;
   max-width: 100%;
-  color: #8e2249;
+  color: #4d5761;
   border-radius: 12px;
 }
 
@@ -161,7 +159,7 @@ p {
 .card {
   border-radius: 10px;
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .row {
   margin-right: 0px;
@@ -204,7 +202,7 @@ p {
 
 .todayInfo {
   font-style: italic;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 6px;
   margin-bottom: 0;
 }
@@ -242,4 +240,5 @@ p {
   border-color: rgba(0, 0, 0, 0.125);
   background-color: #fff;
   border-width: 1px;
+  padding-left: 6px;
 }
