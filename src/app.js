@@ -13,7 +13,7 @@ let daysOfWeek = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 
 let dayOfWeek = daysOfWeek[currentDay];
@@ -59,6 +59,11 @@ function displayWeather(response) {
   windSpeed.innerHTML = `Wind Speed: ${response.data.wind.speed} m/s`;
   let weatherDescription = document.querySelector("#weather-description");
   weatherDescription.innerHTML = response.data.weather[0].main;
+  // Update temperature icon
+  let iconID = response.data.weather[0].icon;
+  let iconUrl = `http://openweathermap.org/img/wn/${iconID}@2x.png`;
+  console.log(iconUrl);
+  document.getElementById("today-icon").src = iconUrl;
 }
 
 function defineUrl(city) {
