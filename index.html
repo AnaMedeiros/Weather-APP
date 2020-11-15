@@ -19,16 +19,13 @@
   </head>
   <body>
     <div class="container">
-      <div class="firstHeader">
+      <div class="secondHeader">
         <img
           class="sheCodesPlusLogo"
-          src="images/sheCodesPlusLogo.png"
+          src="https://www.shecodes.io/assets/products/logos/plus-7a8cae29bdd4c7bd2c4385b97890dfde14da7d15dac0133e937bfe15cdc77725.png"
           alt="SheCodesPlusLogo"
         />
-        <h2>Shecodes Plus Project</h2>
-      </div>
-      <div class="secondHeader">
-        <h1>Weather Forecast</h1>
+        <h1 class="header">Weather Forecast</h1>
       </div>
       <div class="row forcastCard">
         <div class="col-md-6 leftSide">
@@ -50,7 +47,7 @@
             </div>
 
             <div class="todayTemperature">
-              <span id="today-temperature">21</span>
+              <span id="today-temperature"></span>
               <span id="temperature-symbol">ºC</span>
               <button id="temperature-symbol-switch">ºF</button>
             </div>
@@ -58,8 +55,9 @@
             <img
               id="today-icon"
               class="todayIcon"
-              src="images/sunny.png"
-              alt="Sunny"
+              src="images/Spinner-1s-200px.svg"
+              src="images/Spinner-1s-200px.svg"
+              alt="Loading"
             />
             <div class="todayInfoBox">
               <p id="weather-description" class="todayInfo"></p>
@@ -77,12 +75,12 @@
             <img
               id="forcastDay1-icon"
               class="tomorrowIcon"
-              src="images/cloudSun.png"
-              alt="Cloudy Sunny Day"
+              src="images/Spinner-1s-200px.svg"
+              alt="Loading"
             />
           </div>
           <div class="row nextDaysBlock">
-            <div class="card col-md-6 thirdDayBlock next4Days">
+            <div class="card col-md-6 leftColumn next4Days">
               <p class="nextDays">
                 <strong id="forcastDay2-day"></strong>
               </p>
@@ -90,11 +88,11 @@
               <img
                 id="forcastDay2-icon"
                 class="nextDaysIcon"
-                src="images/cloud.png"
-                alt="Cloudy Day"
+                src="images/Spinner-1s-200px.svg"
+                alt="Loading"
               />
             </div>
-            <div class="card col-md-6 fourthDayBlock next4Days">
+            <div class="card col-md-6 rightColumn next4Days">
               <p class="nextDays">
                 <strong id="forcastDay3-day"></strong>
               </p>
@@ -102,11 +100,11 @@
               <img
                 id="forcastDay3-icon"
                 class="nextDaysIcon"
-                src="images/cloudSun.png"
-                alt="Cloudy Sunny Day"
+                src="images/Spinner-1s-200px.svg"
+                alt="Loading"
               />
             </div>
-            <div class="card col-md-6 fifthDayBlock next4Days">
+            <div class="card col-md-6 leftColumn next4Days">
               <p class="nextDays">
                 <strong id="forcastDay4-day"></strong>
               </p>
@@ -114,11 +112,11 @@
               <img
                 id="forcastDay4-icon"
                 class="nextDaysIcon"
-                src="images/sunny.png"
-                alt="Sunny"
+                src="images/Spinner-1s-200px.svg"
+                alt="Loading"
               />
             </div>
-            <div class="card col-md-6 sixthDayBlock next4Days">
+            <div class="card col-md-6 rightColumn next4Days">
               <p class="nextDays">
                 <strong id="forcastDay5-day"></strong>
               </p>
@@ -126,8 +124,8 @@
               <img
                 id="forcastDay5-icon"
                 class="nextDaysIcon"
-                src="images/rain.png"
-                alt="Rainny Day"
+                src="images/Spinner-1s-200px.svg"
+                alt="Loading"
               />
             </div>
           </div>
@@ -135,9 +133,13 @@
       </div>
     </div>
 
-    <div class="coder">
+    <a
+      class="coder"
+      href="https://www.linkedin.com/in/ana-gabriela-medeiros-3425b270/"
+      target="_blank"
+    >
       <strong>Coded by Ana Gabriela Medeiros</strong>
-    </div>
+    </a>
 
     <a href="https://github.com/AnaMedeiros/Weather-APP" target="_blank"
       >Open-Source code</a
