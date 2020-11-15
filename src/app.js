@@ -40,23 +40,27 @@ let hour = hoursFormate();
 let currentHourPosition = document.querySelector("#currentHour");
 currentHourPosition.innerHTML = `${hour}`;
 
-// Changing h1 to selected City and search for local temperature
-
 function displayWeather(response) {
+  // Update city
   let userLocation = document.querySelector("#userLocation");
   userLocation.innerHTML = response.data.name;
+  // Update present temperature
   let userLocationTemperature = document.querySelector("#today-temperature");
   userLocationTemperature.innerHTML = Math.round(response.data.main.temp);
+  // Set temperature primary unit and alternative
   let temperatureSymbol = document.querySelector("#temperature-symbol");
   temperatureSymbol.innerHTML = "ºC";
   let temperatureSymbolSwitch = document.querySelector(
     "#temperature-symbol-switch"
   );
   temperatureSymbolSwitch.innerHTML = "ºF";
+  // Update humidity
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  // Update wind-speed
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = `Wind Speed: ${response.data.wind.speed} m/s`;
+  // Update weather description
   let weatherDescription = document.querySelector("#weather-description");
   weatherDescription.innerHTML = response.data.weather[0].main;
   // Update temperature icon
