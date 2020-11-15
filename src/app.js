@@ -1,23 +1,24 @@
 let key = "a655939222306992b42a3cc83e99e95d";
 
 // Changing Day and Hour to present moment
-
 let now = new Date();
-
 let currentDay = now.getDay();
+function displaydayOfWeek(timestamp) {
+  let daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-let daysOfWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+  let dayOfWeek = daysOfWeek[timestamp];
+  return dayOfWeek;
+}
 
-let dayOfWeek = daysOfWeek[currentDay];
-
+let dayOfWeek = displaydayOfWeek(currentDay);
 let currentDayPosition = document.querySelector("#currentDay");
 currentDayPosition.innerHTML = `${dayOfWeek}, `;
 
@@ -39,6 +40,28 @@ function hoursFormate() {
 let hour = hoursFormate();
 let currentHourPosition = document.querySelector("#currentHour");
 currentHourPosition.innerHTML = `${hour}`;
+
+function displayForcastWeather(response) {
+  for (index = 1; index < 6; index++) {
+    document.querySelector(
+      `#forcastDay${index}-temperature`
+    ).innerHTML = `${Math.round(response.data.daily[index].temp.day)} ºC`;
+
+    let forcastDayIconId = response.data.daily[index].weather[0].icon;
+    let iconUrl = `http://openweathermap.org/img/wn/${forcastDayIconId}@2x.png`;
+    document.getElementById(`forcastDay${index}-icon`).src = iconUrl;
+    document.getElementById(`forcastDay${index}-icon`).alt =
+      response.data.daily[index].weather[0].main;
+
+    if (index > 1) {
+      document.querySelector(
+        `#forcastDay${index}-day`
+      ).innerHTML = `${displaydayOfWeek(
+        new Date(response.data.daily[index].dt * 1000).getDay()
+      )}`;
+    }
+  }
+}
 
 function displayWeather(response) {
   // Update city
@@ -66,14 +89,18 @@ function displayWeather(response) {
   // Update temperature icon
   let iconID = response.data.weather[0].icon;
   let iconUrl = `http://openweathermap.org/img/wn/${iconID}@2x.png`;
-  console.log(iconUrl);
   document.getElementById("today-icon").src = iconUrl;
+  document.getElementById("today-icon").alt = response.data.weather[0].main;
+  // Find lat and long
+  let lat = response.data.coord.lat;
+  let lon = response.data.coord.lon;
+  let urlForcast = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+  axios.get(urlForcast).then(displayForcastWeather);
 }
 
 function defineUrl(city) {
   let urlMain = "https://api.openweathermap.org/data/2.5/weather?";
   let url = `${urlMain}q=${city}&appid=${key}&units=metric`;
-  console.log(url);
   axios.get(url).then(displayWeather);
 }
 
